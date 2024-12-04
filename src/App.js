@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-//import Home from "./pages/Home";
+//import logo from './logo.svg';
+//import './App.css';
+import React from "react";
+import {Routes, Route, Link} from "react-router-dom"
+import Home from "./pages/home";
+import About from "./pages/About";
+import Counter from "./pages/Counter";
 
 function App() {
   return (
-    <div className="App">
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -14,13 +18,22 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer"  
         >
           Learn React
         </a>
       </header>
-    </div>
-    /* <div className='App'><Home /></div> */
+    </div>*/
+    <div className='App'>
+      <nav>
+        <Link to="/">home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link> 
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+    </div> 
   );
 }
 
