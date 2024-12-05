@@ -5,11 +5,11 @@ const Counter = () => {
 
     const increase = () => {
         setNumber(num + 1);
-    }
+    };
 
     const decrease = () => {
         setNumber(num - 1);
-    }
+    };
 
     return (
         <div>
@@ -17,7 +17,7 @@ const Counter = () => {
             <button onClick={decrease}>-1</button>
             <p>{num}</p>
         </div>
-    )
-}
+    );
+};
 
 export default Counter;
